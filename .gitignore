@@ -1,0 +1,30 @@
+# ============================================================
+# Datasets (pesan cientos de MB; se descargan según el README)
+# ============================================================
+*.csv
+!resultados/tabla_*.csv
+
+# ============================================================
+# Modelos entrenados (algunos superan el límite de 100 MB de GitHub)
+# ============================================================
+resultados/*.pkl
+
+# ============================================================
+# Entornos virtuales y cachés de Python
+# ============================================================
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ============================================================
+# Sistema operativo / editor
+# ============================================================
+.DS_Store
+Thumbs.db
+deberes/
+ieee_cis/
+data_splits
+.devcontainer/
