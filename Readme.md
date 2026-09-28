@@ -62,17 +62,19 @@ XGBoost sin tratamiento es el modelo con mejor relación rendimiento/coste sobre
 
 ## Entorno técnico
 
-| Componente | Versión |
-|---|---|
-| Python | 3.12 |
-| scikit-learn | 1.4.x |
-| XGBoost | 2.x |
-| LightGBM | 4.x |
-| imbalanced-learn | 0.12.x |
-| shap | 0.45.x |
-| pandas | 2.x |
-| numpy | 1.26.x |
-| matplotlib / seaborn | 3.8.x / 0.13.x |
+| Componente | Versión (notebooks 01–04) | Versión (notebook 05 v2) |
+|---|---|---|
+| Python | 3.12 | 3.12 |
+| scikit-learn | 1.8.0 | 1.9.0 |
+| XGBoost | 3.2.0 | 3.3.0 |
+| LightGBM | 4.6.0 | 4.6.0 |
+| imbalanced-learn | 0.14.1 | 0.14.2 |
+| shap | 0.51.0 | 0.52.0 |
+| pandas | 3.0.3 | 3.0.3 |
+| numpy | 2.4.6 | 2.4.6 |
+| matplotlib / seaborn | 3.10.9 / 0.13.2 | 3.11.0 / 0.13.2 |
+
+Versiones tomadas de las salidas de instalación registradas en cada notebook.
 
 **Hardware utilizado:** CPU Intel Core i7 (13.ª generación), 64 GB RAM DDR5, GPU NVIDIA RTX 3060 Ti, almacenamiento SSD 2 TB.
 

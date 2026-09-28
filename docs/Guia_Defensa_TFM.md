@@ -302,6 +302,8 @@ Al revisar el código frente a la memoria encontré detalles que un tribunal té
 
 ## 8. Inconsistencias del repositorio y la memoria (corrígelas si puedes antes de la defensa)
 
+> El texto exacto para corregir cada punto del docx está en **`docs/Correcciones_docx.md`** (además de otros errores: `scale_pos_weight` = 577 y no 578, y cinco frases con una palabra perdida). La tabla de versiones del README ya está corregida.
+
 El Anexo A enlaza el repositorio público, así que un miembro del tribunal podría abrirlo:
 
 | # | Problema | Dónde | Recomendación |
