@@ -45,7 +45,9 @@ recursos/
    Genera: `resultados/fig9_shap_xgb_3x3.png`, `fig9_shap_rf_3x3.png`, `fig9_shap_combinado.png` (versión final, array 3×3 de las 9 variables PCA más discriminativas por modelo), además de `fig11_shap_beeswarm.png` y `fig12_shap_barplot.png` (importancia media), `fig13_shap_waterfall_TP.png` / `fig13_1_shap_waterfall_TP.png` (explicación local de una transacción fraudulenta detectada) y `tabla_shap_importancia.csv`.
 
 5. **`notebook_05_generalizacion_IEEE_CIS_v2.ipynb`** — Validación externa del protocolo: reentrena los dos modelos finalistas sobre IEEE-CIS bajo dos escenarios (A: hiperparámetros heredados de ULB; B: GridSearchCV específico para IEEE-CIS) y compara el rendimiento entre dominios.
-   Genera: `resultados/tabla_resultados_ieee_cis.csv`, `tabla_ieee_escenario_A.csv`, `fig14_generalizacion_comparativa.png` (comparación ULB vs. IEEE-CIS en dos filas, una por modelo) y los modelos `model_{XGB,RF}_IEEE_{A,CIS}.pkl`.
+   Genera: `resultados/tabla_ieee_escenario_A.csv`, `tabla_ieee_escenario_B.csv`, `fig14_generalizacion_comparativa.png` (comparación ULB vs. IEEE-CIS en dos filas, una por modelo) y los modelos `model_{XGB,RF}_IEEE_{A,B}.pkl`. La tabla consolidada `resultados/tabla_resultados_ieee_cis.csv` (ULB frente a IEEE-CIS con ΔAUC-PR, equivalente a la Tabla 7 de la memoria) reúne los finalistas de `tabla_resultados_ulb.csv` y los dos escenarios.
+
+   > Nota: las tablas de IEEE-CIS se regeneraron a partir de las salidas guardadas en `notebook_05_generalizacion_IEEE_CIS_v2.ipynb` (la ejecución usada en la memoria), porque las versiones anteriores procedían del notebook v1. En ese notebook la fila "RF" se entrenaba en realidad con XGBoost, lo que producía dos filas idénticas. Los tiempos de entrenamiento tienen la precisión con que se imprimieron (0,1 s), y el tiempo de inferencia del Escenario B queda vacío porque no se imprimió.
 
 ## Resultados principales
 
