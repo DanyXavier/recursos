@@ -45,7 +45,9 @@ recursos/
    Genera: `resultados/fig9_shap_xgb_3x3.png`, `fig9_shap_rf_3x3.png`, `fig9_shap_combinado.png` (versión final, array 3×3 de las 9 variables PCA más discriminativas por modelo), además de `fig11_shap_beeswarm.png` y `fig12_shap_barplot.png` (importancia media), `fig13_shap_waterfall_TP.png` / `fig13_1_shap_waterfall_TP.png` (explicación local de una transacción fraudulenta detectada) y `tabla_shap_importancia.csv`.
 
 5. **`notebook_05_generalizacion_IEEE_CIS_v2.ipynb`** — Validación externa del protocolo: reentrena los dos modelos finalistas sobre IEEE-CIS bajo dos escenarios (A: hiperparámetros heredados de ULB; B: GridSearchCV específico para IEEE-CIS) y compara el rendimiento entre dominios.
-   Genera: `resultados/tabla_resultados_ieee_cis.csv`, `tabla_ieee_escenario_A.csv`, `fig14_generalizacion_comparativa.png` (comparación ULB vs. IEEE-CIS en dos filas, una por modelo) y los modelos `model_{XGB,RF}_IEEE_{A,CIS}.pkl`.
+   Genera: `resultados/tabla_ieee_escenario_A.csv`, `tabla_ieee_escenario_B.csv`, `fig14_generalizacion_comparativa.png` (comparación ULB vs. IEEE-CIS en dos filas, una por modelo) y los modelos `model_{XGB,RF}_IEEE_{A,B}.pkl`. La tabla consolidada `resultados/tabla_resultados_ieee_cis.csv` (ULB frente a IEEE-CIS con ΔAUC-PR, equivalente a la Tabla 7 de la memoria) reúne los finalistas de `tabla_resultados_ulb.csv` y los dos escenarios.
+
+   > Nota: las tablas de IEEE-CIS se regeneraron a partir de las salidas guardadas en `notebook_05_generalizacion_IEEE_CIS_v2.ipynb` (la ejecución usada en la memoria), porque las versiones anteriores procedían del notebook v1. En ese notebook la fila "RF" se entrenaba en realidad con XGBoost, lo que producía dos filas idénticas. Los tiempos de entrenamiento tienen la precisión con que se imprimieron (0,1 s), y el tiempo de inferencia del Escenario B queda vacío porque no se imprimió.
 
 ## Resultados principales
 
@@ -60,17 +62,19 @@ XGBoost sin tratamiento es el modelo con mejor relación rendimiento/coste sobre
 
 ## Entorno técnico
 
-| Componente | Versión |
-|---|---|
-| Python | 3.12 |
-| scikit-learn | 1.4.x |
-| XGBoost | 2.x |
-| LightGBM | 4.x |
-| imbalanced-learn | 0.12.x |
-| shap | 0.45.x |
-| pandas | 2.x |
-| numpy | 1.26.x |
-| matplotlib / seaborn | 3.8.x / 0.13.x |
+| Componente | Versión (notebooks 01–04) | Versión (notebook 05 v2) |
+|---|---|---|
+| Python | 3.12 | 3.12 |
+| scikit-learn | 1.8.0 | 1.9.0 |
+| XGBoost | 3.2.0 | 3.3.0 |
+| LightGBM | 4.6.0 | 4.6.0 |
+| imbalanced-learn | 0.14.1 | 0.14.2 |
+| shap | 0.51.0 | 0.52.0 |
+| pandas | 3.0.3 | 3.0.3 |
+| numpy | 2.4.6 | 2.4.6 |
+| matplotlib / seaborn | 3.10.9 / 0.13.2 | 3.11.0 / 0.13.2 |
+
+Versiones tomadas de las salidas de instalación registradas en cada notebook.
 
 **Hardware utilizado:** CPU Intel Core i7 (13.ª generación), 64 GB RAM DDR5, GPU NVIDIA RTX 3060 Ti, almacenamiento SSD 2 TB.
 
