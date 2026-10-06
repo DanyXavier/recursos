@@ -1,0 +1,3 @@
+Modelo,Escenario,Estrategia,AUC_PR,AUC_ROC,Recall,Precision,F1,TP,FP,TN,FN,T_train_s,T_inf_ms,Best_params,CV_AUC_PR_mean
+XGB,B_optimizado,SMOTE+GridSearchCV,0.6138,0.9268,0.8309,0.1871,0.3055,3434,14915,99060,699,3214.3,,"{'classifier__learning_rate': 0.1, 'classifier__max_depth': 6, 'classifier__n_estimators': 200}",0.6209
+RF,B_optimizado,SMOTE+GridSearchCV,0.6238,0.9109,0.4445,0.852,0.5842,1837,319,113656,2296,6760.3,,"{'classifier__max_depth': 20, 'classifier__max_features': 'sqrt', 'classifier__n_estimators': 200}",0.6167
